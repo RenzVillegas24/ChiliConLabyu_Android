@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navi"
+    app:startDestination="@id/mainMenu">
+
+    <fragment
+        android:id="@+id/mainMenu"
+        android:name="com.mooncode.chiliconlabyu.MainMenu"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu" >
+        <action
+            android:id="@+id/action_mainMenu_to_wiFiScan"
+            app:destination="@id/wiFiScan" />
+        <action
+            android:id="@+id/action_mainMenu_to_settings"
+            app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_mainMenu_to_pairScan"
+            app:destination="@id/pairScan" />
+    </fragment>
+    <fragment
+        android:id="@+id/wiFiScan"
+        android:name="com.mooncode.chiliconlabyu.WiFiScan"
+        android:label="fragment_wiFiScan"
+        tools:layout="@layout/fragment_wifi_scan" >
+        <action
+            android:id="@+id/action_wiFiScan_to_wiFiConnect"
+            app:destination="@id/wiFiConnect" />
+    </fragment>
+    <fragment
+        android:id="@+id/pair"
+        android:name="com.mooncode.chiliconlabyu.Pair"
+        android:label="fragment_pair"
+        tools:layout="@layout/fragment_pair" />
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.mooncode.chiliconlabyu.Settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settings_to_wiFiScan"
+            app:destination="@id/wiFiScan" />
+        <action
+            android:id="@+id/action_settings_to_pairScan"
+            app:destination="@id/pairScan" />
+    </fragment>
+    <fragment
+        android:id="@+id/wiFiConnect"
+        android:name="com.mooncode.chiliconlabyu.WiFiConnect"
+        android:label="fragment_wi_fi_connect"
+        tools:layout="@layout/fragment_wi_fi_connect" >
+        <action
+            android:id="@+id/action_wiFiConnect_to_mainMenu"
+            app:destination="@id/mainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/pairScan"
+        android:name="com.mooncode.chiliconlabyu.PairScan"
+        android:label="fragment_pair_scan"
+        tools:layout="@layout/fragment_pair_scan" >
+        <action
+            android:id="@+id/action_pairScan_to_pair"
+            app:destination="@id/pair" />
+    </fragment>
+</navigation>

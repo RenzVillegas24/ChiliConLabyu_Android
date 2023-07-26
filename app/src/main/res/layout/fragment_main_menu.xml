@@ -1,0 +1,412 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainMenu"
+    style="@style/Theme.Material3.DayNight" >
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/headerCardSticky"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:strokeWidth="0dp"
+        app:cardElevation="30dp"
+        style="@style/headerCardView">
+
+
+
+        <GridLayout
+            android:id="@+id/headerCardStickyGrid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginRight="10dp"
+            android:columnCount="3"
+            android:rowCount="4">
+
+            <Button
+                android:id="@+id/btnSettings"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_column="2"
+                android:layout_row="0"
+                android:layout_gravity="center"
+                android:drawableTop="@drawable/ic_settings"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:padding="8dp"/>
+
+            <TextView
+                style="@style/Theme.Material3.DayNight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:id="@+id/textViewTitle_small"
+                android:text="ChiliConLabyu"
+                android:layout_gravity="left|center_vertical"
+                android:layout_columnSpan="2"
+                android:layout_columnWeight="1"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/textViewDay_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/day"
+                android:textSize="18sp"
+                style="@style/Theme.Material3.DayNight" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="2"
+                android:fontFamily="sans-serif"
+                android:text="Moisture Level"
+                android:layout_gravity="start"
+                android:textSize="17sp"
+                style="@style/Theme.Material3.DayNight" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_marginLeft="30dp"
+                android:layout_row="2"
+                android:fontFamily="sans-serif"
+                android:id="@+id/textViewMoisture_small"
+                android:text="@string/moisture_level"
+                android:textSize="17sp"
+                style="@style/Theme.Material3.DayNight" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="3"
+                android:fontFamily="sans-serif"
+                android:text="Light Intensity"
+                android:layout_gravity="start"
+                android:textSize="17sp"
+                style="@style/Theme.Material3.DayNight" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_marginLeft="30dp"
+                android:layout_row="3"
+                android:fontFamily="sans-serif"
+                android:id="@+id/textViewLightIntensity_small"
+                android:text="@string/light_intensity"
+                android:layout_gravity="start"
+                android:textSize="17sp"
+                style="@style/Theme.Material3.DayNight" />
+
+        </GridLayout>
+
+
+
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ScrollView
+        android:id="@+id/mainScroller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:visibility="gone"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/headerCard"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_gravity="center_horizontal"
+                app:strokeWidth="0dp"
+                app:cardElevation="30dp"
+                style="@style/headerCardView">
+
+
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:columnCount="2"
+                    android:rowCount="3">
+
+                    <TextView
+                        android:id="@+id/textViewDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnSpan="2"
+                        android:layout_columnWeight="1"
+                        android:layout_row="0"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="@string/day"
+                        android:layout_gravity="center"
+                        android:textSize="45sp"
+                        style="@style/Theme.Material3.DayNight" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_row="1"
+                        android:fontFamily="sans-serif"
+                        android:text="Moisture Level"
+                        android:layout_gravity="center"
+                        android:textSize="20sp"
+                        style="@style/Theme.Material3.DayNight" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_column="0"
+                        android:layout_row="2"
+                        android:fontFamily="sans-serif"
+                        android:id="@+id/textViewMoisture"
+                        android:text="@string/moisture_level"
+                        android:layout_gravity="center"
+                        android:textSize="30sp"
+                        style="@style/Theme.Material3.DayNight" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_column="1"
+                        android:layout_row="1"
+                        android:fontFamily="sans-serif"
+                        android:text="Light Intensity"
+                        android:layout_gravity="center"
+                        android:textSize="20sp"
+                        style="@style/Theme.Material3.DayNight" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_column="1"
+                        android:layout_row="2"
+                        android:fontFamily="sans-serif"
+                        android:id="@+id/textViewLightIntensity"
+                        android:text="@string/light_intensity"
+                        android:layout_gravity="center"
+                        android:textSize="30sp"
+                        style="@style/Theme.Material3.DayNight" />
+
+                </GridLayout>
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="30dp"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/tree_6" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:id="@+id/textViewTitle"
+                    android:text="ChiliConLabyu"
+                    android:textAlignment="center"
+                    android:layout_marginTop="300dp"
+                    android:textSize="40sp"
+                    style="@style/Theme.Material3.DayNight" />
+
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <LinearLayout
+                android:id="@+id/mainContent"
+                android:layout_marginTop="200dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Controls"
+                    android:textAlignment="textStart"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:paddingTop="30dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="20sp"
+                    style="@style/Theme.Material3.DayNight" />
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:cardElevation="45dp"
+                    app:strokeWidth="0dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/btnAutomatic"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_column="2"
+                            android:layout_row="0"
+                            android:text="Automatic"/>
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/btnSprinkler"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_column="2"
+                            android:layout_row="0"
+                            android:text="Sprinkler"/>
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/btnLight"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_column="2"
+                            android:layout_row="0"
+                            android:text="Light"/>
+
+                        <LinearLayout
+                            android:id="@+id/layoutLightSlider"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:id="@+id/textSliderLightIntensity"
+                                android:text="@string/light_intensity_indicator"
+                                android:textSize="11sp"
+                                android:paddingLeft="12dp"
+                                style="@style/Theme.Material3.DayNight" />
+
+                            <com.google.android.material.slider.Slider
+                                android:id="@+id/sliderLightIntensity"
+                                app:labelBehavior="gone"
+                                android:valueFrom="0"
+                                android:valueTo="100"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Informations"
+                    android:textAlignment="textStart"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:paddingTop="30dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="20sp"
+                    style="@style/Theme.Material3.DayNight" />
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:cardElevation="45dp"
+                    app:strokeWidth="0dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:orientation="vertical">
+
+
+                        <Button
+                            android:id="@+id/btnData"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_column="2"
+                            android:layout_row="0"
+                            android:text="Data Statistics"
+                            style="@style/Widget.MaterialComponents.Button.Item"/>
+
+                        <Button
+                            android:id="@+id/btnConnectedDevices"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_column="2"
+                            android:layout_row="0"
+                            android:text="Connected Devices"
+                            style="@style/Widget.MaterialComponents.Button.Item"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

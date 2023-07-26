@@ -1,0 +1,7 @@
+<resources>
+    <attr name="colorGREEN" format="color" />
+    <attr name="colorOnGREEN" format="color" />
+    <attr name="colorGREENContainer" format="color" />
+    <attr name="colorOnGREENContainer" format="color" />
+    <attr name="harmonizeGREEN" format="boolean" />
+</resources>
